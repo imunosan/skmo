@@ -1,0 +1,127 @@
+main {
+    padding: 10px;
+    padding-top: 40px;
+
+    background: url("https://i.ytimg.com/vi/aCVE6bzjEVI/maxresdefault.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    padding: 0;
+    border-radius: 5px;
+    
+    box-shadow: 0 2px 6px 0 rgba(153, 153, 153, 0.63);
+    background-color: color(white);
+
+    &__header {
+        height: 54px;
+        width: 100%;
+
+        border-radius: 4px 4px 0px 0px;
+        background-color: color(ns-primary);
+
+        text-transform: uppercase;
+        text-align: center;
+
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        align-items: center;
+
+        h1 {
+            justify-self: start;
+
+            font-size: 16px;
+            color: color(white) !important;
+
+            i {
+                padding: 20px;
+            }
+        }
+
+        a {
+            padding-right: 20px;
+            justify-self: end;
+
+            &:link, &:visited {
+                text-decoration: none;
+                color: color(white);
+            }
+        }
+    }
+
+    &__body{
+        padding: 25px;
+
+        display:inline-block; 
+
+        h2 {
+            padding-top: 15px;
+            padding-bottom: 15px;
+
+            color: color(ns-primary) !important;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        a {
+            width: 15%;
+
+            &:link, &:visited {
+                text-decoration: underline;
+                font-weight: bold;
+                color: color(ns-primary);
+            }
+        }
+    }
+
+    &__date {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        align-items: center;
+
+        padding-top: 14px;
+    }
+
+    &__clock {
+        background-color: color(ns-primary);
+        border-radius: 40px;
+        width: 46px;
+        height: 46px;
+
+        display: grid;
+
+        color: color(white);
+        text-align: center;
+
+        p {
+            align-self: center;
+        }
+    }
+
+    &__site {
+        justify-items: start;
+        padding-left: 15px;
+    }
+
+    &-square {
+        height: 1px;
+        background-color: color(darken-lighter);
+    }
+
+    &__more {
+        height: 44px;
+        object-fit: contain;
+        display: grid;
+        
+        a {
+            text-align: center;
+            align-self: center;
+
+            &:link, &:visited {
+                font-weight: bold;
+                color: color(ns-primary);
+            }
+        }
+    }
+}
