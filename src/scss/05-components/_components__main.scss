@@ -1,6 +1,10 @@
+::-webkit-scrollbar-track {
+    background: none; 
+}
+
 main {
     padding: 10px;
-    padding-top: 40px;
+    padding-top: 50px;
 
     background: url("https://i.ytimg.com/vi/aCVE6bzjEVI/maxresdefault.jpg");
     background-repeat: no-repeat;
@@ -72,6 +76,7 @@ main {
         }
 
         a {
+
             &:link,
             &:visited {
                 text-decoration: underline;
@@ -88,7 +93,7 @@ main {
 
     &__date {
         display: grid;
-        grid-template-columns: 25% 75%;
+        grid-template-columns: 46px auto;
         align-items: center;
 
         padding-top: 14px;
@@ -111,6 +116,7 @@ main {
     }
 
     &__site {
+        padding-left: 10px;
         justify-self: start;
     }
 
@@ -128,7 +134,8 @@ main {
             text-align: center;
             align-self: center;
 
-            &:link, &:visited {
+            &:link,
+            &:visited {
                 color: color(ns-primary);
             }
         }
@@ -142,6 +149,13 @@ main {
         grid-auto-rows: auto;
         grid-row-gap: 8px;
 
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: color(ns-tertiary);
+
+        }
+
         &:nth-child(1) {
             padding-top: 0px;
         }
@@ -149,7 +163,7 @@ main {
         &:nth-last-of-type(1) {
             padding-bottom: 0px;
         }
-        
+
         p:nth-child(1) {
             font-size: 14px;
             color: color(date);
@@ -183,7 +197,7 @@ main {
                 padding-left: 5px;
                 align-self: center;
 
-                p{
+                p {
                     padding: 0%;
                 }
             }
@@ -193,10 +207,10 @@ main {
     &__nav {
         background-color: color(container-nav);
         height: 40px;
-        
+
         display: grid;
         align-items: center;
-        
+
         ul {
             li {
                 font-size: 16px;
