@@ -10,7 +10,9 @@ main {
 .container {
     padding: 0;
     border-radius: 5px;
-    
+
+    display: grid;
+
     box-shadow: 0 2px 6px 0 rgba(153, 153, 153, 0.63);
     background-color: color(white);
 
@@ -43,41 +45,50 @@ main {
             padding-right: 20px;
             justify-self: end;
 
-            &:link, &:visited {
+            &:link,
+            &:visited {
                 text-decoration: none;
                 color: color(white);
             }
         }
     }
 
-    &__body{
-        padding: 25px;
+    &__day {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
 
-        display:inline-block; 
+    &__body {
+        padding: 20px;
+        justify-content: center;
+
+        display: inline-block;
 
         h2 {
-            padding-top: 15px;
-            padding-bottom: 15px;
-
             color: color(ns-primary) !important;
             font-size: 14px;
             text-transform: uppercase;
             font-weight: bold;
         }
-        a {
-            width: 15%;
 
-            &:link, &:visited {
+        a {
+            &:link,
+            &:visited {
                 text-decoration: underline;
                 font-weight: bold;
                 color: color(ns-primary);
             }
         }
+
+        &_contact {
+            height: 300px;
+            overflow-y: scroll;
+        }
     }
 
     &__date {
         display: grid;
-        grid-template-columns: repeat(2, auto);
+        grid-template-columns: 25% 75%;
         align-items: center;
 
         padding-top: 14px;
@@ -100,11 +111,10 @@ main {
     }
 
     &__site {
-        justify-items: start;
-        padding-left: 15px;
+        justify-self: start;
     }
 
-    &-square {
+    &__line {
         height: 1px;
         background-color: color(darken-lighter);
     }
@@ -113,15 +123,100 @@ main {
         height: 44px;
         object-fit: contain;
         display: grid;
-        
+
         a {
             text-align: center;
             align-self: center;
 
             &:link, &:visited {
-                font-weight: bold;
                 color: color(ns-primary);
             }
+        }
+    }
+
+    &__section {
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        display: grid;
+        grid-auto-rows: auto;
+        grid-row-gap: 8px;
+
+        &:nth-child(1) {
+            padding-top: 0px;
+        }
+
+        &:nth-last-of-type(1) {
+            padding-bottom: 0px;
+        }
+        
+        p:nth-child(1) {
+            font-size: 14px;
+            color: color(date);
+        }
+
+    }
+
+    &__profile {
+        display: grid;
+        grid-template-columns: 20px auto;
+
+        figure {
+            width: 20px;
+            height: 20px;
+        }
+
+        p {
+            padding-left: 5px;
+            align-self: center;
+        }
+
+        &_contact {
+            grid-template-columns: 40px auto;
+
+            figure {
+                width: 40px;
+                height: 40px;
+            }
+
+            div {
+                padding-left: 5px;
+                align-self: center;
+
+                p{
+                    padding: 0%;
+                }
+            }
+        }
+    }
+
+    &__nav {
+        background-color: color(container-nav);
+        height: 40px;
+        
+        display: grid;
+        align-items: center;
+        
+        ul {
+            li {
+                font-size: 16px;
+                display: inline;
+
+                a {
+                    color: color(ns-primary);
+                    text-decoration: none;
+
+                    margin: 8px;
+                }
+            }
+        }
+
+        &_active {
+            a {
+                font-weight: bold;
+            }
+
+            border-bottom: 2px solid color(ns-primary);
         }
     }
 }
