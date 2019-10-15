@@ -12,37 +12,37 @@
 </head>
 
 <body>
-    <header class="menu grid">
-        <div class="menu__logo col-2">
+    <header class="menu">
+        <div class="menu__logo">
             <p>everis<strong>knowler</strong></p>
         </div>
-        <form class="menu__search col-4" action="">
+        <form class="menu__search" action="">
             <fieldset>
                 <legend class="hide-accessible">Busqueda</legend>
                 <input type="text" placeholder="proyecto skm">
             </fieldset>
         </form>
-        <nav class="menu__nav col-4 grid">
+        <nav class="menu__nav">
             <ul>
-                <li class="col-auto">
+                <li>
                     <a href="#">
                         <i class="fas fa-home"></i>
                         <p>Inicio</p>
                     </a>
                 </li>
-                <li class="col-auto">
+                <li>
                     <a href="#">
                         <i class="fas fa-th"></i>
                         <p>Aplicaciones</p>
                     </a>
                 </li>
-                <li class="col-auto">
+                <li>
                     <a href="#">
                         <i class="fas fa-globe"></i>
                         <p>Comunidades</p>
                     </a>
                 </li>
-                <li class="col-auto">
+                <li>
                     <a href="#">
                         <i class="fas fa-box"></i>
                         <p>everPedia</p>
@@ -50,11 +50,11 @@
                 </li>
             </ul>
         </nav>
-        <div class="menu__profile col-2 grid">
-            <a class="col-6" href="#">
+        <div class="menu__profile">
+            <a href="#">
                 <i class="fas fa-bell"></i>
             </a>
-            <figure class="col-6">
+            <figure>
                 <img src="../../assets/images/perfil/perfil@3x.png" alt="Perfil">
             </figure>
         </div>
@@ -62,7 +62,7 @@
 
     <main>
         <article class="grid">
-            <div class="col-3">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <div class="container">
                     <div class="container__header">
                         <h1><i class="fas fa-calendar-alt"></i> Eventos</h1>
@@ -110,8 +110,49 @@
                         <a href="#">Ver más <i class="fas fa-chevron-down"></i></a>
                     </div>
                 </div>
+
+                <div class="container">
+                    <div class="container__header">
+                        <h1><i class="fas fa-bell"></i> Notificaciones</h1>
+                        <a href="#">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </a>
+                    </div>
+                    <div class="container__body">
+                        <div class="container__notif">
+                            <div class="container__section">
+                                <h3>Actualizar benchmark perfiles en proyecto</h3>
+                                <p>SKM: intranet inteligente</p>
+                                <p><i class="fas fa-exclamation-circle"></i> Deadline 19/06</p>
+                            </div>
+                            <i class="far fa-check-square"></i>
+                        </div>
+                        <div class="container__line"></div>
+                        <div class="container__notif">
+                            <div class="container__section">
+                                <h3>Actualizar documentos</h3>
+                                <p>SKM: intranet inteligente</p>
+                                <p><i class="fas fa-exclamation-circle"></i> Deadline 19/06</p>
+                            </div>
+                            <i class="far fa-check-square"></i>
+                        </div>
+                        <div class="container__line"></div>
+                        <div class="container__notif">
+                            <div class="container__section">
+                                <h3>Actualizar documentos</h3>
+                                <p>SKM: intranet inteligente</p>
+                                <p><i class="fas fa-exclamation-circle"></i> Deadline 19/06</p>
+                            </div>
+                            <i class="far fa-check-square"></i>
+                        </div>
+                    </div>
+                    <div class="container__line"></div>
+                    <div class="container__more">
+                        <a href="#">Ver más <i class="fas fa-chevron-down"></i></a>
+                    </div>
+                </div>
             </div>
-            <div class="col-6">
+            <div class="col-lg-6 col-md-4 col-sm-6 col-xs-12">
                 <div class="container">
                     <div class="container__header">
                         <h1><i class="fas fa-envelope"></i> Mails</h1>
@@ -167,8 +208,83 @@
                         <a href="#">Ver más <i class="fas fa-chevron-down"></i></a>
                     </div>
                 </div>
+                <div class="container">
+                    <div class="container__header">
+                        <h1><i class="fas fa-folder-open"></i> Proyectos</h1>
+                        <a href="#">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </a>
+                    </div>
+                    <nav class="container__nav">
+                        <ul>
+                            <li class="container__nav_active"><a href="#">En curso</a></li>
+                            <li><a href="#">Relacionados</a></li>
+                            <li><a href="#">Cerrados</a></li>
+                        </ul>
+                    </nav>
+                    <div class="container__body">
+                        <div class="container__section container__section_tag">
+                            <a href="#">SKM: intranet inteligente</a>
+                            <p>Proyecto Interno</p>
+                            <nav class="container__tag">
+                                <ul>
+                                    <li>
+                                        <a href="">Intranet</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Buscador inteligente</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">+2</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="container__line"></div>
+                        <div class="container__section container__section_tag">
+                            <a href="#">SKM: intranet inteligente</a>
+                            <p>Proyecto Interno</p>
+                            <nav class="container__tag">
+                                <ul>
+                                    <li>
+                                        <a href="">Intranet</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Buscador inteligente</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">+2</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="container__line"></div>
+                        <div class="container__section container__section_tag">
+                            <a href="#">SKM: intranet inteligente</a>
+                            <p>Proyecto Interno</p>
+                            <nav class="container__tag">
+                                <ul>
+                                    <li>
+                                        <a href="">Intranet</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Buscador inteligente</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">+2</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="container__line"></div>
+                    <div class="container__more">
+                        <a href="#">Ver más <i class="fas fa-chevron-down"></i></a>
+                    </div>
+                </div>
             </div>
-            <div class="col-3">
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <div class="container">
                     <div class="container__header">
                         <h1><i class="fas fa-users"></i> Mis contactos</h1>
@@ -267,31 +383,54 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="container">
-                    <div class="container__header">
-                        <h1><i class="fas fa-bell"></i> Notificaciones</h1>
-                        <a href="#">
-                            <i class="fas fa-ellipsis-v"></i>
-                        </a>
-                    </div>
-                    <div class="container__body">
+                        <div class="container__line"></div>
                         <div class="container__section">
-                            <div>
-
+                            <div class="container__profile container__profile_contact">
+                                <figure>
+                                    <img src="../../assets/images/perfil/perfil@3x.png" alt="">
+                                </figure>
+                                <div>
+                                    <a href="#">Francisco Javier Fernández <i class="fas fa-chevron-down"></i></a>
+                                    <p>Student - EDX</p>
+                                </div>
                             </div>
-                            <h3>Actualizar benchmark perfiles en proyecto</h3>
-                            <p><i class="fas fa-exclamation-circle"></i> Deadline 19/06</p>
-                            <p>SKM: intranet inteligente</p>
                         </div>
                         <div class="container__line"></div>
-                    </div>
-                    <div class="container__line"></div>
-                    <div class="container__more">
-                        <a href="#">Ver más <i class="fas fa-chevron-down"></i></a>
+                        <div class="container__section">
+                            <div class="container__profile container__profile_contact">
+                                <figure>
+                                    <img src="../../assets/images/perfil/perfil@3x.png" alt="">
+                                </figure>
+                                <div>
+                                    <a href="#">Francisco Javier Fernández <i class="fas fa-chevron-down"></i></a>
+                                    <p>Student - EDX</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container__line"></div>
+                        <div class="container__section">
+                            <div class="container__profile container__profile_contact">
+                                <figure>
+                                    <img src="../../assets/images/perfil/perfil@3x.png" alt="">
+                                </figure>
+                                <div>
+                                    <a href="#">Francisco Javier Fernández <i class="fas fa-chevron-down"></i></a>
+                                    <p>Student - EDX</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container__line"></div>
+                        <div class="container__section">
+                            <div class="container__profile container__profile_contact">
+                                <figure>
+                                    <img src="../../assets/images/perfil/perfil@3x.png" alt="">
+                                </figure>
+                                <div>
+                                    <a href="#">Francisco Javier Fernández <i class="fas fa-chevron-down"></i></a>
+                                    <p>Student - EDX</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

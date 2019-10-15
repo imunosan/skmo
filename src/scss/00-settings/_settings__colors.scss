@@ -19,7 +19,7 @@ $color-map: (
 	ns-tertiary			:	#515151,
 	ns-main             :   #252d32,
 	white	   	 		:	#ffffff,
-	black	    		:	#000000,
+	black	    		:	#333333,
 	disabled			:	#e9ecef,
 	// Default
 	default-lighter		:	#e2e3e5,
@@ -36,7 +36,7 @@ $color-map: (
 	// Success
 	success-lighter		:	#d4edda,
 	success-light		:	#c3e6cb,
-	success				:	#28a745,
+	success				:	#a8b061,
 	success-dark		:	#218838,
 	success-darker		:	#1e7e34,
 	// Danger
@@ -48,7 +48,7 @@ $color-map: (
 	// Warning
 	warning-lighter		:	#fff3cd,
 	warning-light		:	#ffeeba,
-	warning				:	#ffc107,
+	warning				:	#f5a623,
 	warning-dark		:	#e0a800,
 	warning-darker		:	#d39e00,
 	// Info
@@ -69,5 +69,8 @@ $color-map: (
 	right				:	#859603,
 	date				:	#666666,
 	// Nav
-	container-nav		:	#e3e8f2
+	container-nav		:	#e3e8f2,
+	//Tag
+	back				:	#e8eeb3
+
 );
