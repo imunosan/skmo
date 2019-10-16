@@ -1,86 +1,180 @@
-
-
 .menu {
-    a:link, a:visited {
-        text-decoration: none;
-        color: white;
-    }
-    
-    width: 100%;
     height: 75px;
-
-    text-align: center;
-
-    color: white;
-    box-shadow: 0 2px 6px 0 rgba(153, 153, 153, 0.63);
+    color: color(white);
+    
+    display: grid;
+    grid-template-columns: 14% 40% 31% auto;
+    grid-gap: 9px;
+    align-items: center;
+    
     background-image: linear-gradient(to left, #859603, #207e8e 50%, #4579b0);
+    
+    &__slash {
+        display: none;
+        justify-self: center;
+
+        i {
+            font-size: 28px;
+        }
+    }
 
     &__logo {
-        display: grid;
+        justify-self: start;
+
+        figure {
+            display: none;
+
+            img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        justify-self: end;
+        padding-right: 10%;
 
         p {
-            font-size: 17px;
-            align-self: center;
+            font-size: 18px;
         }
     }
 
     &__search {
-
-        fieldset input {
+        form fieldset input {
             width: 100%;
             height: 40px;
-            padding: 15px;
-            margin-top: 3px;
+            padding-left: 15px;
 
             border: 0;
             border-radius: 3px;
         }
-
+        i {
+            font-size: 20px;
+            
+            display: none;
+        }
     }
 
     &__nav {
-        padding: 0;
-        align-self: center;
+        ul {
+            display: grid;
+            grid-template-columns: repeat(4, auto);
 
-        ul li {
-            padding: .5rem;
-            padding-left: 30px;
-            text-align: center;
+            li {
+                a {
+                    display: grid;
+                    grid-auto-rows: auto;
+                    justify-items: center;
 
-            a i {
-                font-size: 25px;
+                    i {
+                        font-size: 25px;
+                    }
+
+                    &:link,
+                    &:visited {
+                        text-decoration: none;
+                        color: white;
+
+                    }
+                }
             }
         }
+
     }
 
     &__profile {
-        padding: 0;
-        align-self: center;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+
+        align-items: center;
+        justify-items: center;
 
         a {
-            padding: 0;
-            padding-top: 10px;
-            align-self: center;
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            grid-gap: 5px;
+
+            justify-self: start;
+
+            &:first-of-type {
+                justify-self: center;
+            }
+
+            figure {
+                height: 37px;
+                width: 37px;
+            }
 
             i {
-                font-size: 23px;
-                text-align: center;
-                align-self: center;
+                font-size: 22px;
+
+                color: color(white);
+            }
+
+            &:link,
+            &:visited {
+                text-decoration: none;
+                color: white;
+
+            }
+        }
+    }
+}
+
+@include media-query('lg') {
+    .menu {
+        grid-template-columns: 14% 31% 37% auto;
+    }
+}
+
+@include media-query('md') {
+    .menu {
+        grid-template-columns: 11% 17% 45% auto;
+        grid-gap: 15px;
+
+        &__logo {
+            justify-self: end;
+            padding: 0%;
+        }
+
+        &__slash {
+            display: block;
+        }
+
+        &__nav {
+            display: none;
+        }
+    }
+}
+
+@include media-query ('xs') {
+    .menu {
+        height: 60px;
+
+        grid-template-columns: 17% 16% 30% auto;
+        grid-gap: 0px;
+
+        &__logo {
+            justify-self: start;
+            
+            figure {
+                display: block;
+            }
+
+            p {
+                display: none;
             }
         }
 
-        &::after {
-            background-image: url('../../assets/images/down_arrow/invalid-name.png');
+        &__search {
+            justify-self: end;
 
-            width: 10px;
-            height: 10px;
-        }
-
-        figure {
-            padding: 0;
-            
-            height: 40px;
-            width: 40px;
+            fieldset {
+                display: none;
+            }
+            i {
+                display: block;
+                justify-self: end;
+            }
         }
     }
 }

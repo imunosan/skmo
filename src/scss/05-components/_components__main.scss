@@ -87,6 +87,17 @@ main {
         }
 
         &_contact {
+            div a {
+                display: grid;
+                grid-template-columns: repeat(2,auto);
+
+                i {
+                    text-decoration: underline color(white);
+                    align-self: start;
+                    justify-self: end;
+                }
+            }
+
             height: 500px;
             overflow-y: scroll;
         }
@@ -278,9 +289,7 @@ main {
             grid-template-columns: repeat(3,auto);
             grid-gap: 5px;
 
-            li {
-                display: inline;
-                
+            li {                
                 background-color: color(back);
                 
                 border:2px solid color(back);
@@ -305,5 +314,31 @@ main {
                 background-color: color(white);
             }
         }
+    }
+}
+
+@include media-query ('lg') {
+    main {
+        padding-top: 32px;
+    }
+}
+
+@include media-query ('md') {
+    main {
+        padding: 0px;
+        padding-top:15px;
+    }
+
+    .container__tag {
+        ul li a {
+            font-size: 10px;
+        }
+    }
+}
+
+@include media-query ('xs') {
+    main {
+        padding: 0px;
+        padding-top:12px;
     }
 }
