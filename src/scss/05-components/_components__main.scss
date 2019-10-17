@@ -42,7 +42,7 @@ main {
             justify-self: start;
 
             font-size: 16px;
-            color: color(white) !important;
+            color: color(white);
 
             i {
                 padding: 20px;
@@ -70,7 +70,7 @@ main {
         padding: 20px;
         justify-content: center;
         h2 {
-            color: color(ns-primary) !important;
+            color: color(ns-primary);
             font-size: 14px;
             text-transform: uppercase;
             font-weight: bold;
