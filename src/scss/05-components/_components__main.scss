@@ -212,6 +212,7 @@ main {
         }
     }
 
+
     &__profile {
         display: grid;
         grid-template-columns: 20px auto;
@@ -225,6 +226,10 @@ main {
             padding-left: 5px;
             align-self: center;
             justify-items: start;
+        }  
+
+        &_block {
+            display: block;
         }
 
         &_contact {
@@ -237,7 +242,7 @@ main {
 
             div {
                 padding-left: 5px;
-                align-self: center;
+                align-self: start;
 
                 p {
                     padding: 0%;

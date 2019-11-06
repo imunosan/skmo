@@ -64,9 +64,13 @@
             },
             libs: {
                 requiredJS: [
-                    './node_modules/requirejs/require.js'
+                    './node_modules/requirejs/require.js',
+                    './node_modules/jquery/src/jquery.js',
+                    './node_modules/slick-carousel/slick/slick.min.js'
                 ],
-                requiredCSS: []
+                requiredCSS: [
+                    './node_modules/slick-carousel/slick/slick.css'
+                ]
             },
             tasksConfig: {
                 scss: {

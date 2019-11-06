@@ -1,9 +1,9 @@
 var frontJs = {};
 
 frontJs.breakpoints = {
-    xl: 1440,
-    lg: 1280,
-    md: 1024,
-    sm: 768,
-    xs: 320
+    xl: 1280,
+    lg: 1024,
+    md: 600,
+    sm: 320,
+    //xs: 320
 }
