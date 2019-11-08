@@ -12,49 +12,60 @@
 </head>
 
 <body>
-    <header class="arriba">
-        <div class="arriba__logo">
+    <header class="menu">
+        <div class="menu__slash">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="menu__logo">
+            <figure>
+                <img src="http://164.138.209.7/~circuloe/wp-content/uploads/2016/10/logo-circulo-de-economia-provincia-de-alicante-1.png"
+                    alt="Logo">
+            </figure>
             <p>everis<strong>knowler</strong></p>
         </div>
-        <form class="arriba__search" action="">
-            <fieldset>
-                <legend class="hide-accessible">Busqueda</legend>
-                <input type="text" placeholder="proyecto skm">
-            </fieldset>
-        </form>
-        <nav class="arriba__nav">
+        <div class="menu__search">
+            <form action="">
+                <fieldset>
+                    <legend class="hide-accessible">Busqueda</legend>
+                    <label class="hide-accessible" for="busqueda">Busqueda</label>
+                    <input type="text" name="busqueda" id="descriptionbusqueda" placeholder="proyecto skm">
+                </fieldset>
+            </form>
+            <i class="fas fa-search"></i>
+        </div>
+        <nav class="menu__nav">
             <ul>
                 <li>
-                    <div>
+                    <a href="#" title="Inicio">
                         <i class="fas fa-home"></i>
                         <p>Inicio</p>
-                    </div>
+                    </a>
                 </li>
                 <li>
-                    <div>
+                    <a href="#" title="Aplicaciones">
                         <i class="fas fa-th"></i>
                         <p>Aplicaciones</p>
-                    </div>
+                    </a>
                 </li>
                 <li>
-                    <div>
+                    <a href="#" title="Comunidades">
                         <i class="fas fa-globe"></i>
                         <p>Comunidades</p>
-                    </div>
+                    </a>
                 </li>
                 <li>
-                    <div>
+                    <a href="#" title=everPedia>
                         <i class="fas fa-box"></i>
                         <p>everPedia</p>
-                    </div>
+                    </a>
                 </li>
             </ul>
         </nav>
-        <div class="arriba__profile">
-            <a href="#">
+        <div class="menu__profile">
+            <a href="#" title="Notificaciones">
                 <i class="fas fa-bell"></i>
             </a>
-            <a href="#">
+            <a href="#" title="Perfil">
                 <figure>
                     <img src="../../assets/images/perfil/perfil@3x.png" alt="Perfil">
                 </figure>
@@ -62,6 +73,48 @@
             </a>
         </div>
     </header>
+    <article>
+        <div class="slider">
+            <img src="../../assets/images/Carousel/foto.jpg" alt="Costa1">
+            <img src="../../assets/images/Carousel/foto.jpg" alt="Costa2">
+            <img src="../../assets/images/Carousel/foto.jpg" alt="Costa3">
+            <img src="../../assets/images/Carousel/foto.jpg" alt="Costa4">
+            <img src="../../assets/images/Carousel/foto.jpg" alt="Costa5">
+            <img src="../../assets/images/Carousel/foto.jpg" alt="Costa6">
+        </div>
+    </article>
 </body>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.slider').slick({
+        //     arrows: true,
+        //     centerMode: true,
+        //     centerPadding: '60px',
+        //     slidesToShow: 3,
+        //     speed: 1500,
+        //     index: 2,
+        //     responsive: [{
+        //             breakpoint: 768,
+        //             settings: {
+        //                 arrows: true,
+        //                 centerMode: true,
+        //                 centerPadding: '40px',
+        //                 slidesToShow: 3
+        //             }
+        //         },
+        //         {
+        //             breakpoint: 480,
+        //             settings: {
+        //                 arrows: true,
+        //                 centerMode: true,
+        //                 centerPadding: '40px',
+        //                 slidesToShow: 1
+        //             }
+        //         }
+        //     ]
+        });
+    });
+</script>
 
 </html>

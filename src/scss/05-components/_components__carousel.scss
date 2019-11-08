@@ -1,5 +1,92 @@
-.carousel {
-    div figure {
-        width: 35%;
+.center {
+    overflow: hidden;
+    position: relative;
+
+    img {
+        margin: 15px;
+        border-style: solid;
+    }
+}
+
+.slick {
+
+    &-slide:not(.slick-current) {
+        border-color: white;
+        background-color: rgba(0, 0, 0, 0.8);
+        transform: scale(.95);
+        opacity: 0.80;
+
+    }
+
+    &-current {
+        transform: scale(1.05);
+
+        border-color: yellow;
+    }
+
+    &-dots {
+        text-align: center;
+
+        li {
+            display: inline;
+            margin: 10px;
+            visibility: hidden;
+
+
+            &:after {
+                visibility: visible;
+                font-size: 50px;
+                line-height: 15px;
+                content: '•';
+                text-align: center;
+                opacity: .75;
+                text-shadow: 0px 0px 5px yellowgreen;
+            }
+        }
+    }
+
+    &-active {
+        opacity: 1;
+        color: yellow;
+    }
+
+    &-arrow {
+        position: absolute;
+        top: 45%;
+        z-index: 1;
+        margin-left: 10px;
+        margin-right: 10px;
+        color: color(white);
+    }
+
+    &-prev {
+        visibility: hidden;
+        left: 0%;
+        transform: rotate(180deg);
+
+        &:after {
+            visibility: visible;
+            font-family: 'Font Awesome 5 Free';
+            font-size: 30px;
+            content: "\f144";
+            font-weight: 900;
+            background: color(green);
+            border-radius: 50px;
+        }
+    }
+
+    &-next {
+        visibility: hidden;
+        right: 0%;
+
+        &:after {
+            visibility: visible;
+            font-family: 'Font Awesome 5 Free';
+            font-size: 30px;
+            content: "\f144";
+            font-weight: 900;
+            background: color(green);
+            border-radius: 50px;
+        }
     }
 }
