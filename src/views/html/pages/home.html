@@ -36,13 +36,13 @@
         <nav class="menu__nav">
             <ul>
                 <li>
-                    <a href="#" title="Inicio">
+                    <a href="http://localhost:8000/views/index.html" title="Inicio">
                         <i class="fas fa-home"></i>
                         <p>Inicio</p>
                     </a>
                 </li>
                 <li>
-                    <a href="#" title="Aplicaciones">
+                    <a href="http://localhost:8000/views/pages/home.html" title="Aplicaciones">
                         <i class="fas fa-th"></i>
                         <p>Aplicaciones</p>
                     </a>
@@ -73,48 +73,225 @@
             </a>
         </div>
     </header>
-    <article>
-        <div class="slider">
-            <img src="../../assets/images/Carousel/foto.jpg" alt="Costa1">
-            <img src="../../assets/images/Carousel/foto.jpg" alt="Costa2">
-            <img src="../../assets/images/Carousel/foto.jpg" alt="Costa3">
-            <img src="../../assets/images/Carousel/foto.jpg" alt="Costa4">
-            <img src="../../assets/images/Carousel/foto.jpg" alt="Costa5">
-            <img src="../../assets/images/Carousel/foto.jpg" alt="Costa6">
-        </div>
-    </article>
+    <main>
+        <article class="grid">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="container">
+                    <div class="container__header">
+                        <h1><i class="fas fa-filter"></i>Filtros</h1>
+                        <a href="#" title="Drop Filtros">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </a>
+                    </div>
+                    <div class="container__body container__body_filter">
+                        <form action="">
+                            <fieldset>
+                                <legend class="hide-accessible">Filtros Clientes</legend>
+                                <div class="container__element">
+                                    <input type="checkbox" name="electrico">
+                                    <label for="electrico">Vehículo Eléctrico</label>
+                                </div>
+                                <div class="container__element">
+                                    <label for="puertas"><input type="text" placeholder="Número de puertas"
+                                            list="puertas"></label>
+                                    <datalist id="puertas">
+                                        <option value="3">
+                                        <option value="5">
+                                    </datalist>
+                                </div>
+                                <div class="container__element">
+                                    <label class="container__radio" for="Todos"><input type="radio" name="tipo"
+                                            id="Todos" checked="true">Todos</label>
+                                    <label class="container__radio" for="Berlina"><input type="radio" name="tipo"
+                                            id="Berlina">Berlina</label>
+                                    <label class="container__radio" for="Sedan"><input type="radio" name="tipo"
+                                            id="Sedan">Sedán</label>
+                                    <label class="container__radio" for="Mono-volumen"><input type="radio" name="tipo"
+                                            id="Mono-volumen">Mono-volumen</label>
+                                </div>
+                            </fieldset>
+                            <button type="reset" class="container__button container__button_clear">Clean Filter</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-4 col-sm-6 col-xs-12">
+                <div class="container">
+                    <div class="container__header">
+                        <h1><i class="fas fa-car"></i>Coches</h1>
+                        <a href="#" title="Drop Coches">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </a>
+                    </div>
+                    <div class="container__body">
+                        <table class="container__table">
+                            <tr>
+                                <th class="tg-0lax">Cliente</th>
+                                <th class="tg-0lax">Marca</th>
+                                <th class="tg-0lax">Modelo</th>
+                                <th class="tg-0lax">Color</th>
+                                <th class="tg-0lax"></th>
+                            </tr>
+                            <tr>
+                                <td class="tg-0lax"></td>
+                                <td class="tg-0lax"></td>
+                                <td class="tg-0lax"></td>
+                                <td class="tg-0lax">
+                                    <div class="container__relleno"></div>
+                                </td>
+                                <td class="tg-0lax">
+                                    <button id="button__delete" class="container__button container__button_update">
+                                        <p>Actualizar</p>
+                                    </button>
+                                    <button id="button__delete" class="container__button container__button_delete">
+                                        <p>Eliminar</p>
+                                    </button>
+                                </td>
+                            </tr>
+                        </table>
+                        <button id="button__new" class="container__button container__button_clear">Nuevo
+                            cliente</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="container">
+                    <div class="container__header">
+                        <h1><i class="fas fa-warehouse"></i>Vehiculos en el taller</h1>
+                        <a href="#" title="Drop Taller">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </a>
+                    </div>
+                    <div class="container__body">
+                        <table class="container__table">
+                            <tr>
+                                <td class="tg-0lax"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="container__header">
+                        <h1><i class="fas fa-hands-helping"></i>Vehiculos entregados</h1>
+                        <a href="#" title="Drop Entregados">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </a>
+                    </div>
+                    <div class="container__body">
+
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article id="modal-box" class="modal-box">
+            <div class="container modal">
+                <div class="container__header">
+                    <h1><i class="fas fa-hands-helping"></i>Crear / Actualizar Cliente</h1>
+                    <a href="#" class="modal__close" title="Close Crear / Actualizar Cliente">
+                        <i class="fas fa-times"></i>
+                    </a>
+                </div>
+                <div class="container__body modal__body">
+                    <form action="">
+                        <fieldset>
+                            <legend class="hide-accessible">Cliente</legend>
+                            <div class="container__element">
+                                <label for="cliente">
+                                    Nombre del cliente: <input id="cliente" type="text" placeholder="Cliente">
+                                </label>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend class="hide-accessible">Coche</legend>
+                            <div class="container__element">
+                                <label for="marca">
+                                    Marca: <input id="marca" type="text" placeholder="Marca">
+                                </label>
+                            </div>
+                            <div class="container__element">
+                                <label for="modelo">
+                                    Modelo: <input id="modelo" type="text" placeholder="Modelo">
+                                </label>
+                            </div>
+                            <div class="container__element">
+                                <label for="color">
+                                    Color del vehiculo: <input id="color" type="color" placeholder="Color">
+                                </label>
+                            </div>
+                            <div class="container__element">
+                                <input type="checkbox" name="electrico">
+                                <label for="electrico">Vehículo Eléctrico</label>
+                            </div>
+                            <div class="container__element">
+                                <label for="puertas"><input type="text" placeholder="Número de puertas"
+                                        list="puertas"></label>
+                                <datalist id="puertas">
+                                    <option value="3">
+                                    <option value="5">
+                                </datalist>
+                            </div>
+                            <div class="container__element">
+                                <label class="container__radio" for="Berlina"><input type="radio" name="tipo"
+                                        id="Berlina">Berlina</label>
+                                <label class="container__radio" for="Sedan"><input type="radio" name="tipo"
+                                        id="Sedan">Sedán</label>
+                                <label class="container__radio" for="Mono-volumen"><input type="radio" name="tipo"
+                                        id="Mono-volumen">Mono-volumen</label>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend class="hide-accessible">Taller</legend>
+                            <div class="container__element">
+                                <label for="fecha">
+                                    Fecha entrada Taller: <input name="fecha" type="date">
+                                </label>
+                            </div>
+                            <div class="container__element">
+                                <label for="foto">
+                                    Foto del Vehiculo: <input name="foto" type="url">
+                                </label>
+                            </div>
+                        </fieldset>
+                        <div class="modal__button">
+                            <button type="reset" class="container__button container__button_save">Guardar</button>
+                            <button type="reset" class="container__button container__button_clear">Borrar</button>
+                            <button type="reset" class="container__button container__button_delete modal__close">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </article>
+    </main>
 </body>
 
 <script type="text/javascript">
-    $(document).ready(function () {
-        $('.slider').slick({
-        //     arrows: true,
-        //     centerMode: true,
-        //     centerPadding: '60px',
-        //     slidesToShow: 3,
-        //     speed: 1500,
-        //     index: 2,
-        //     responsive: [{
-        //             breakpoint: 768,
-        //             settings: {
-        //                 arrows: true,
-        //                 centerMode: true,
-        //                 centerPadding: '40px',
-        //                 slidesToShow: 3
-        //             }
-        //         },
-        //         {
-        //             breakpoint: 480,
-        //             settings: {
-        //                 arrows: true,
-        //                 centerMode: true,
-        //                 centerPadding: '40px',
-        //                 slidesToShow: 1
-        //             }
-        //         }
-        //     ]
-        });
-    });
+    //----------------------- Modal crear / actualizar cliente -----------------------//
+    
+    // Get the modal
+    var modal = document.getElementById("modal-box");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("button__new");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("modal__close")[0];
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 </script>
 
 </html>

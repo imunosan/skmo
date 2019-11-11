@@ -1,0 +1,134 @@
+.container {
+    &__element {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    &__radio {
+        padding-right: .5px;
+        padding-left: .5px;
+    }
+
+    &__table {
+        width: 100%;
+        margin-bottom: 10px;
+        overflow-x: auto;
+
+        border-collapse: collapse;
+        border-spacing: 0;
+
+        td,
+        th {
+            font-size: 14px;
+            padding: 10px 5px;
+            border-style: solid;
+            border-width: 1px;
+            overflow: hidden;
+            border-color: black;
+        }
+
+        .tg-0lax {
+            vertical-align: middle;
+        }
+
+        th {
+            background-color: color(green-table);
+            font-weight: bold;
+            text-align: left;
+        }
+
+        td {
+            font-weight: normal;
+            text-align: center;
+        }
+    }
+
+    &__relleno {
+        margin: 0px auto;
+        text-align: center;
+
+        width: 50px;
+        height: 50px;
+
+        border-style: solid;
+        border-width: 5px;
+        border-color: color(middle);
+        background-color: white;
+    }
+
+    &__button {
+        padding: 8px;
+        border-radius: 25px;
+        color: color(white);
+        border: 2px solid;
+
+        cursor: pointer;
+
+        &_save {
+            background-color: color(success);
+            border-color: color(success-darker);
+        }
+
+        &_update {
+            background-color: color(primary);
+            border-color: color(primary-darker);
+        }
+
+        &_delete {
+            background-color: color(danger);
+            border-color: color(danger-darker);
+        }
+
+        &_clear {
+            background-color: color(warning);
+            border-color: color(warning-darker);
+        }
+    }
+}
+
+.modal-box {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+.modal {
+    width: 400px;
+
+    &__body {
+        margin: 0 auto;
+    }
+
+    &__button {
+        padding-top: 12px;
+
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-column-gap: 10px;
+    }
+
+    &__close {
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+}

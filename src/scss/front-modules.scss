@@ -36,6 +36,7 @@
 @import '01-tools/_tools__truncate';
 @import '01-tools/_tools__user-select';
 @import '01-tools/_tools__z-index';
+
 //*----------------------------------------------------------
 //     # GENERIC
 // ----------------------------------------------------------*/
@@ -48,6 +49,7 @@
 @import "02-generic/_generic__box-sizing";
 @import "02-generic/_generic__fonts";
 @import "02-generic/_generic__reset";
+
 //*----------------------------------------------------------
 //     # BASE
 // ----------------------------------------------------------*/
@@ -59,6 +61,7 @@
 @import '03-elements/_elements__image';
 @import '03-elements/_elements__lists';
 @import '03-elements/_elements__scrollbar';
+
 // /*----------------------------------------------------------
 //     # OBJECTS
 // ----------------------------------------------------------*/
@@ -82,7 +85,7 @@
 @import '05-components/_components__header.scss';
 @import '05-components/_components__main.scss';
 @import '05-components/_components__carousel.scss';
-
+@import '05-components/_components__taller.scss';
 
 // /*----------------------------------------------------------
 //     # COMPONENTS REPOSITORY
@@ -92,7 +95,6 @@
 @import '05-components/repository/_components__repository.scss';
 @import '05-components/repository/_components__sidebar.scss';
 @import '05-components/repository/_components__header.scss';
-
 
 //*----------------------------------------------------------
 //     # TRUMPS

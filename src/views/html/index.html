@@ -50,13 +50,13 @@
         <nav class="menu__nav">
             <ul>
                 <li>
-                    <a href="#" title="Inicio">
+                    <a href="http://localhost:8000/views/index.html" title="Inicio">
                         <i class="fas fa-home"></i>
                         <p>Inicio</p>
                     </a>
                 </li>
                 <li>
-                    <a href="#" title="Aplicaciones">
+                    <a href="http://localhost:8000/views/pages/home.html" title="Aplicaciones">
                         <i class="fas fa-th"></i>
                         <p>Aplicaciones</p>
                     </a>
@@ -548,7 +548,7 @@
                         x.style.opacity = num;
 
                         num = num + 0.1;
-                        await sleep(100);
+                        await sleep(50);
                     }
 
                 } else {
@@ -563,16 +563,17 @@
                             num = 0
                         }
 
-                        await sleep(100);
+                        await sleep(50);
                     }
                 }
+
+                break;
             }
 
             console.log("Opacidad al: " + x.style.opacity);
-            break;
         }
 
-        // console.log("Seleccionado: " + select);
+        console.log("Seleccionado: " + select);
     }
 
     // var items = document.querySelectorAll('.ocultar');
