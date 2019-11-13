@@ -536,44 +536,42 @@
     async function hide(obj) {
         let select = obj.target.id;
 
-        for (let i = 0; i < paragraph.length; i++) {
-            let x = paragraph[i];
+        if (select.includes("enlace")) {
+            for (let i = 0; i < paragraph.length; i++) {
+                let x = paragraph[i];
 
-            if (x.id == select) {
-                if (x.style.opacity == 0) {
-                    // x.style.opacity = 1;
-                    let num = 0;
+                if (x.id == select) {
+                    if (x.style.opacity == 0) {
+                        // x.style.opacity = 1;
+                        let num = 0;
 
-                    for (let u = 0; u <= 10; u++) {
-                        x.style.opacity = num;
+                        for (let u = 0; u <= 10; u++) {
+                            x.style.opacity = num;
 
-                        num = num + 0.1;
-                        await sleep(50);
-                    }
-
-                } else {
-                    // x.style.opacity = 0;
-                    let num = 1;
-
-                    for (let u = 11; u >= 0; u--) {
-                        x.style.opacity = num;
-
-                        num = num - 0.1;
-                        if (num <= 0) {
-                            num = 0
+                            num = num + 0.1;
+                            await sleep(50);
                         }
 
-                        await sleep(50);
+                    } else {
+                        // x.style.opacity = 0;
+                        let num = 1;
+
+                        for (let u = 11; u >= 0; u--) {
+                            x.style.opacity = num;
+
+                            num = num - 0.1;
+                            if (num <= 0) {
+                                num = 0
+                            }
+                            await sleep(50);
+                        }
                     }
+                    break;
                 }
-
-                break;
+                console.log("Opacidad al: " + x.style.opacity);
             }
-
-            console.log("Opacidad al: " + x.style.opacity);
+            console.log("Seleccionado: " + select);
         }
-
-        console.log("Seleccionado: " + select);
     }
 
     // var items = document.querySelectorAll('.ocultar');

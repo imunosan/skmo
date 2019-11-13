@@ -1,0 +1,37 @@
+[{
+        "id": "0",
+        "cliente": "Alfredo Ramirez",
+        "marca": "Nissan",
+        "modelo": "Micra",
+        "color": "fff",
+        "electrico": "true",
+        "puertas": "5",
+        "tipo": "sedan",
+        "fechaEntrada": "30/11/2019",
+        "foto": "http://www.vehiculocomercial.com/wp-content/uploads/vehiculo-com-pequ.png"
+    },
+    {
+        "id": "1",
+        "cliente": "Antonio Moreno",
+        "marca": "BMW",
+        "modelo": "320D",
+        "color": "ff0000",
+        "electrico": "false",
+        "puertas": "3",
+        "tipo": "berlina",
+        "fechaEntrada": "11/11/2019",
+        "foto": "https://www.alamo.com/alamoData/vehicle/bookingCountries/US/SUVS/SFAR.doi.320.high.imageLargeThreeQuarterNodePath.png/1558441307803.png"
+    },
+    {
+        "id": "2",
+        "cliente": "ASDF",
+        "marca": "ASDF",
+        "modelo": "ASDF",
+        "color": "EEF845",
+        "electrico": "true",
+        "puertas": "5",
+        "tipo": "sedan",
+        "fechaEntrada": "28/11/2019",
+        "foto": "http://www.vehiculocomercial.com/wp-content/uploads/vehiculo-com-pequ.png"
+    }
+]

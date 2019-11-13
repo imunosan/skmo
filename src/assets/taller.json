@@ -1,0 +1,13 @@
+[{
+        "id": "0",
+        "cliente": "Alfredo Ramirez",
+        "marca": "Nissan",
+        "modelo": "Micra",
+        "color": "fff",
+        "electrico": "true",
+        "puertas": "5",
+        "tipo": "sedan",
+        "fechaEntrada": "30/11/2019",
+        "foto": "http://www.vehiculocomercial.com/wp-content/uploads/vehiculo-com-pequ.png"
+    }
+]

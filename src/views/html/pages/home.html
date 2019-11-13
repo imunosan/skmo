@@ -124,7 +124,7 @@
                         </a>
                     </div>
                     <div class="container__body">
-                        <table class="container__table">
+                        <table id="tablaCoche" class="container__table">
                             <tr>
                                 <th class="tg-0lax">Cliente</th>
                                 <th class="tg-0lax">Marca</th>
@@ -132,7 +132,7 @@
                                 <th class="tg-0lax">Color</th>
                                 <th class="tg-0lax"></th>
                             </tr>
-                            <tr>
+                            <!-- <tr>
                                 <td class="tg-0lax"></td>
                                 <td class="tg-0lax"></td>
                                 <td class="tg-0lax"></td>
@@ -140,14 +140,14 @@
                                     <div class="container__relleno"></div>
                                 </td>
                                 <td class="tg-0lax">
-                                    <button id="button__delete" class="container__button container__button_update">
+                                    <button id="button__update" class="container__button container__button_update">
                                         <p>Actualizar</p>
                                     </button>
                                     <button id="button__delete" class="container__button container__button_delete">
                                         <p>Eliminar</p>
                                     </button>
                                 </td>
-                            </tr>
+                            </tr> -->
                         </table>
                         <button id="button__new" class="container__button container__button_clear">Nuevo
                             cliente</button>
@@ -163,10 +163,10 @@
                         </a>
                     </div>
                     <div class="container__body">
-                        <table class="container__table">
-                            <tr>
+                        <table id="tablaTaller" class="container__table">
+                            <!-- <tr>
                                 <td class="tg-0lax"></td>
-                            </tr>
+                            </tr> -->
                         </table>
                     </div>
                 </div>
@@ -177,8 +177,15 @@
                             <i class="fas fa-ellipsis-v"></i>
                         </a>
                     </div>
-                    <div class="container__body">
-
+                    <div class="container__body container__body_entregados">
+                        <div id="carousel" class="center">
+                            <img src="../../assets/images/Carousel/foto.jpg" alt="Costa1">
+                            <img src="../../assets/images/Carousel/foto.jpg" alt="Costa2">
+                            <img src="../../assets/images/Carousel/foto.jpg" alt="Costa3">
+                            <img src="../../assets/images/Carousel/foto.jpg" alt="Costa4">
+                            <img src="../../assets/images/Carousel/foto.jpg" alt="Costa5">
+                            <img src="../../assets/images/Carousel/foto.jpg" alt="Costa6">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -186,13 +193,13 @@
         <article id="modal-box" class="modal-box">
             <div class="container modal">
                 <div class="container__header">
-                    <h1><i class="fas fa-hands-helping"></i>Crear / Actualizar Cliente</h1>
+                    <h1><i class="fas fa-file-alt"></i>Crear / Actualizar Cliente</h1>
                     <a href="#" class="modal__close" title="Close Crear / Actualizar Cliente">
                         <i class="fas fa-times"></i>
                     </a>
                 </div>
                 <div class="container__body modal__body">
-                    <form action="">
+                    <form action="" method="post" name="formularioCliente">
                         <fieldset>
                             <legend class="hide-accessible">Cliente</legend>
                             <div class="container__element">
@@ -253,9 +260,11 @@
                             </div>
                         </fieldset>
                         <div class="modal__button">
-                            <button type="reset" class="container__button container__button_save">Guardar</button>
+                            <button type="button" id="enviarCliente"
+                                class="container__button container__button_save">Guardar</button>
                             <button type="reset" class="container__button container__button_clear">Borrar</button>
-                            <button type="reset" class="container__button container__button_delete modal__close">Cancelar</button>
+                            <button type="button"
+                                class="container__button container__button_delete modal__close">Cancelar</button>
                         </div>
                     </form>
                 </div>
@@ -265,8 +274,135 @@
 </body>
 
 <script type="text/javascript">
-    //----------------------- Modal crear / actualizar cliente -----------------------//
-    
+    // ----------------------- JSON ----------------------- //
+    var xmlhttp = new XMLHttpRequest();
+
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var dataArray = JSON.parse(xmlhttp.responseText);
+
+            function tablaCoche() {
+                let tabla = document.getElementById('tablaCoche');
+
+                for (let item of dataArray) {
+                    // let row = tabla.insertRow(-1);
+
+                    // row.id = `cliente` + item.id;
+
+                    // let cell1 = row.insertCell(0);
+                    // let cell2 = row.insertCell(1);
+                    // let cell3 = row.insertCell(2);
+                    // let cell4 = row.insertCell(3);
+                    // let cell5 = row.insertCell(4);
+
+                    // cell1.className = "tg-0lax";
+                    // cell2.className = "tg-0lax";
+                    // cell3.className = "tg-0lax";
+                    // cell4.className = "tg-0lax";
+                    // cell5.className = "tg-0lax";
+
+                    // cell1.innerHTML = item.cliente;
+                    // cell2.innerHTML = item.marca;
+                    // cell3.innerHTML = item.modelo;
+                    // cell4.innerHTML = `<div style="background-color:#` + item.color +
+                    //     `" class="container__relleno"></div>`;
+                    // cell5.innerHTML = `<button id="cliente` + item.id + `" class="container__button container__button_update">Actualizar</button>
+                    //                 <button id="cliente` + item.id +
+                    //     `" class="container__button container__button_delete">Eliminar</button>`;
+
+                    addRow(item, tabla)
+
+                    console.log("ID: " + item.id + " es " + item.cliente);
+                };
+            };
+
+            function tablaTaller() {
+                let tabla = document.getElementById('tablaTaller');
+
+                for (let item of dataArray) {
+                    let row = tabla.insertRow(-1);
+                    let cell1 = row.insertCell(0);
+
+                    row.id = `cliente` + item.id;
+
+                    cell1.className = "tg-0lax";
+
+                    cell1.innerHTML = `El cliente ` + item.cliente + ` con un ` + item.marca + ` ` + item.modelo +
+                        ` entregó el coche en el taller el día ` + item.fechaEntrada + `.`;
+                };
+            };
+
+            function carouselCoche() {
+                let carousel = document.getElementById('carousel');
+
+                for (let item of dataArray) {
+                    let img = document.createElement('img');
+
+                    img.src = item.foto;
+                    img.alt = "Vehiculo " + item.cliente;
+
+                    carousel.appendChild(img);
+                };
+            };
+
+            tablaCoche();
+            tablaTaller();
+            carouselCoche();
+        };
+    };
+
+    function addRow(item, tabla) {
+        let row = tabla.insertRow(-1);
+
+        row.id = `cliente` + item.id;
+
+        let cell1 = row.insertCell(0);
+        let cell2 = row.insertCell(1);
+        let cell3 = row.insertCell(2);
+        let cell4 = row.insertCell(3);
+        let cell5 = row.insertCell(4);
+
+        cell1.className = "tg-0lax";
+        cell2.className = "tg-0lax";
+        cell3.className = "tg-0lax";
+        cell4.className = "tg-0lax";
+        cell5.className = "tg-0lax";
+
+        cell1.innerHTML = item.cliente;
+        cell2.innerHTML = item.marca;
+        cell3.innerHTML = item.modelo;
+        cell4.innerHTML = `<div style="background-color:#` + item.color +
+            `" class="container__relleno"></div>`;
+        cell5.innerHTML = `<button id="cliente` + item.id + `" class="container__button container__button_update">Actualizar</button>
+                <button id="cliente` + item.id +
+            `" class="container__button container__button_delete">Eliminar</button>`;
+    }
+
+    function deleteCliente(obj) {
+        let select = obj.target;
+
+        if (select.className.includes("button_delete")) {
+            // document.getElementById("tablaCoche").deleteRow(select.id);
+            // document.getElementById("tablaTaller").deleteRow();
+
+            let row = document.getElementById(select.id);
+            row.parentNode.removeChild(row);
+
+            let list = document.getElementById('tablaTaller');
+            for (let i = 0; i <= list.rows.length; i++) {
+                if (list.rows[i].id == select.id) {
+                    list.rows[i].remove();
+                };
+            };
+        };
+    };
+
+    document.addEventListener("click", deleteCliente);
+
+    xmlhttp.open("GET", "taller.json");
+    xmlhttp.send();
+
+    // ----------------------- Modal crear / actualizar cliente ----------------------- //
     // Get the modal
     var modal = document.getElementById("modal-box");
 
@@ -274,24 +410,37 @@
     var btn = document.getElementById("button__new");
 
     // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("modal__close")[0];
+    var span = document.getElementsByClassName("modal__close");
 
     // When the user clicks the button, open the modal 
     btn.onclick = function () {
         modal.style.display = "block";
-    }
+    };
 
     // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-        modal.style.display = "none";
-    }
+    for (let i = 0; i < span.length; i++) {
+        spon = span[i];
+
+        spon.onclick = function () {
+            modal.style.display = "none";
+        };
+    };
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";
-        }
-    }
+        };
+    };
+
+    // ----------------------- Carousel Slick ----------------------- // 
+    $(document).ready(function () {
+        $('.center').slick({
+            centerMode: true,
+            centerPadding: '35px',
+            slidesToShow: 1,
+        });
+    });
 </script>
 
 </html>

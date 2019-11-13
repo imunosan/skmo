@@ -1,21 +1,21 @@
 .center {
+    width: auto;
+    height: 100%;
     overflow: hidden;
     position: relative;
+    vertical-align: center;
 
     img {
-        margin: 15px;
         border-style: solid;
     }
 }
 
 .slick {
-
     &-slide:not(.slick-current) {
         border-color: white;
         background-color: rgba(0, 0, 0, 0.8);
         transform: scale(.95);
         opacity: 0.80;
-
     }
 
     &-current {
@@ -25,13 +25,13 @@
     }
 
     &-dots {
+        margin-top: 20px;
         text-align: center;
 
         li {
             display: inline;
             margin: 10px;
             visibility: hidden;
-
 
             &:after {
                 visibility: visible;
@@ -52,7 +52,7 @@
 
     &-arrow {
         position: absolute;
-        top: 45%;
+        top: 40%;
         z-index: 1;
         margin-left: 10px;
         margin-right: 10px;
